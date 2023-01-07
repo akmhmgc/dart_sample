@@ -14,7 +14,5 @@ class Person {
     this.age = age;
   }
 
-  void greeting() {
-    print("私は$nameです。年齢は$ageです");
-  }
+  void greeting() => print("私は$nameです。年齢は$ageです");
 }
