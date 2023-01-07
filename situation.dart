@@ -5,4 +5,5 @@ void main(List<String> args) {
   }else{
     print('$numは奇数です');
   }
+  print("$numは${num % 2 == 0 ? "偶数" : "奇数"}です");
 }
