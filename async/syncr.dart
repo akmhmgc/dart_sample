@@ -7,17 +7,13 @@ void main() {
   print("data1 start");
   print(syncFunc("data1", Duration(seconds: 2)));
   print("data2 start");
-  print(syncFunc("data1", Duration(seconds: 3)));
+  print(syncFunc("data2", Duration(seconds: 3)));
   print("data3 start");
-  print(syncFunc("data1", Duration(seconds: 1)));
+  print(syncFunc("data3", Duration(seconds: 1)));
   print("main end");
 }
 
 syncFunc(String data, Duration sec) {
-  print("syncFunc start");
-  print(DateTime.now().toString());
   sleep(sec);
-  print("syncFunc end");
-  print(DateTime.now().toString());
-  return data;
+  return "$data: ${DateTime.now().toString()}";
 }
