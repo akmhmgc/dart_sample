@@ -12,6 +12,10 @@ class Person {
   void greeting() {
     print("私は${lastName}${_firstName}です");
   }
+
+  static void staticMethod() {
+    print("static method");
+  }
 }
 
 void main() {
@@ -22,4 +26,5 @@ void main() {
   // print(person._firstName);
 
   person.greeting();
+  Person.staticMethod();
 }
