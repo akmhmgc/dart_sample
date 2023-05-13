@@ -31,6 +31,11 @@ class Person {
     print("私は${lastName}${_firstName}です");
   }
 
+  // getter
+  get fullName {
+    return lastName + _firstName;
+  }
+
   static void staticMethod() {
     print("static method");
   }
@@ -45,6 +50,7 @@ void main() {
 
   person.greeting();
   Person.staticMethod();
+  print(person.fullName);
 
   Person origin = Person.origin();
   origin.greeting();
