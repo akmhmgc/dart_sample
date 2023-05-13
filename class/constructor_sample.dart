@@ -9,6 +9,16 @@ class Person {
   //   this.lastName = lastName;
   // }
 
+  // 名前付きコンストラクタ
+  // コンストラクタを複数用意することができる
+  Person.origin() {
+    // this._firstName = '氏';
+    // this.lastName = '名';
+    // 実はメソッド内はthisを省略してもクラス内のフィールドにアクセスできる
+    _firstName = '氏';
+    lastName = '名';
+  }
+
   void greeting() {
     print("私は${lastName}${_firstName}です");
   }
@@ -27,4 +37,7 @@ void main() {
 
   person.greeting();
   Person.staticMethod();
+
+  Person origin = Person.origin();
+  origin.greeting();
 }
