@@ -19,6 +19,14 @@ class Person {
     lastName = '名';
   }
 
+  // ファクトリコンストラクタ
+  factory Person.fromFullName(String fullName) {
+    final parts = fullName.split(' ');
+    final firstName = parts[0];
+    final lastName = parts[1];
+    return Person(firstName, lastName);
+  }
+
   void greeting() {
     print("私は${lastName}${_firstName}です");
   }
@@ -40,4 +48,7 @@ void main() {
 
   Person origin = Person.origin();
   origin.greeting();
+
+  Person personFromFullName = Person.fromFullName("太郎 山田");
+  personFromFullName.greeting();
 }
